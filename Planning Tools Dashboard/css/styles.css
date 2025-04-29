@@ -1,0 +1,145 @@
+/* ------------PAGE GENERAL PROPERTIES--------------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: istok web;
+    color: #ffffff;
+}
+
+div, header, footer, a, label, body{ 
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------HEADER PROPERTIES--------------- */
+
+.header {
+    position: fixed;
+    background-color: #00285f;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    container-type: inline-size;
+    container-name: header;
+    z-index: 10;
+}
+
+.img__homepage-link {
+    max-width: 100%;
+    height: 55px;
+    margin: 15px 55px;
+}
+
+.header__title-container {
+    margin: 15px 50px;
+}
+
+.header__title {
+    font-size: 24px;
+    font-weight: 400;
+    user-select: none;
+}
+
+/* ------------HEADER QUERIES--------------- */
+
+@container header (max-width: 600px) {
+    .header__logo-container{
+        display: none;
+    }
+    
+    .header__title-container {
+        margin: auto;
+    }
+}
+
+/* ------------MAIN SECTION PROPERTIES--------------- */
+
+.main {
+    margin-top: 90px;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    background-image: linear-gradient(#0006, #0006), url(../assets/main-page-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: lighter;
+    container-type: inline-size;
+    container-name: main-wrapper;
+}
+
+.main__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    gap: 20px;
+    padding: 40px 60px;
+    min-height: 90vh;
+    place-content: center;
+}
+
+.main__wrapper-link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.tool {
+    display: grid;
+    place-content: center;
+    border-radius: 20px;
+    background-color: #00285faa;
+}
+
+.tool:hover {
+    opacity: 0.90;
+    outline: 2px solid #fff6;
+}
+
+.tool-name {
+    font-weight: 100;
+}
+
+.tool-img {
+    width: 300px;
+}
+
+/* ------------MAIN SECTION QUERIES--------------- */
+
+@container main-wrapper (min-width: 900px) {
+    .main__wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 70px;
+    }
+
+    .tool {
+        height: 440px;
+    }
+}
+
+/* ------------FOOTER SECTION PROPERTIES--------------- */
+
+.footer__section {
+    padding: 20px;
+    text-align: center;
+    background-color: #00285f;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.footer__section a {
+    color: #fff;
+}
+
+.footer__section a:visited {
+    color: #fff;
+}
+/* Credits: The original code was entirely developed by: Orle Guerrero */
